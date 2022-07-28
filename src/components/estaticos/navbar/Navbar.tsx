@@ -1,10 +1,12 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography} from '@material-ui/core';
+import { Box } from '@mui/material';
+import './Navbar.css';
 function Navbar() {
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense">
+            <AppBar position="static"className="cor">
+                <Toolbar variant="dense" >
                     <Box style={{ cursor: "pointer" }} >
                         <Typography variant="h5" color="inherit">
                             BlogPessoal
