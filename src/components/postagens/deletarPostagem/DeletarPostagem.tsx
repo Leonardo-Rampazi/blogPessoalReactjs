@@ -18,7 +18,7 @@ useEffect(() =>{
 	alert("Você precisa estar logado")
 	History("/login")
 	}
-},[token])
+},[History, token])
 useEffect(()=>{
 	if(id !== undefined){
 	findById(id)

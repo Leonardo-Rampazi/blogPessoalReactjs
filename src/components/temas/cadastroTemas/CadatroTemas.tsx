@@ -4,7 +4,7 @@ import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { useNavigate, useParams} from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import './CadastroTema.css';
+import './CadastroTemas.css';
 
 
 function CadastroTema() {
@@ -34,7 +34,7 @@ async function findById(id: string){
 		}
 	})
      }
-     function updatedTema(e: ChangeEvent<HTMLInputElement>){
+     function updatedTemas(e: ChangeEvent<HTMLInputElement>){
         setTemas({
             ...temas,
             [e.target.name]: e.target.value,
@@ -69,7 +69,7 @@ async function findById(id: string){
         <Container maxWidth="sm" className="topo">
             <form onSubmit ={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={temas.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)}id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={temas.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTemas(e)}id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

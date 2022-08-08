@@ -1,8 +1,7 @@
 import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import {Button} from "@material-ui/core"
-import { Box } from '@mui/material';
+import {Button} from "@material-ui/core";
+import { Box ,Modal} from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 import './modalPostagem.css';
 import CadastroPostagem from '../cadastroPostagem/CadastroPostagem';

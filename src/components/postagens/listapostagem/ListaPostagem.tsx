@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material'
 import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
-import { useNavigate } from 'react-router-dom'
 
 function ListaPostagem() {
   const [postagens, setPostagens] = useState<Postagem[]>([])

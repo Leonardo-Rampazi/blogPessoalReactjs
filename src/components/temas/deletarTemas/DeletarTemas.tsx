@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import {Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import { Box } from '@mui/material';
-import './DeletarTema.css';
+import './DeletarTemas.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Tema from '../../../models/Tema';
 
 
-function DeletarTema() {
+function DeletarTemas() {
   let History = useNavigate();
   const { id } = useParams<{id: string}>();
   const [token, setToken] = useLocalStorage('token');
@@ -78,4 +78,4 @@ async function findById(id: string){
     </>
   );
 }
-export default DeletarTema;
+export default DeletarTemas;
