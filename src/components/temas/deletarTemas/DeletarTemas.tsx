@@ -31,7 +31,7 @@ useEffect(()=>{
 async function findById(id: string){
 	buscaId(`/temas/${id}`,setTemas, {
 		headers: {
-			'authorization': token
+			'Authorization': token
 		}
 	})
      }
@@ -39,8 +39,8 @@ async function findById(id: string){
      function sim(){
       History('/temas')
       deleteId(`/temas/${id}`,{
-      Headers:{
-        'authorization':token
+      headers:{
+        'Authorization':token
       }
     });
       alert('Tema deletado com sucesso');

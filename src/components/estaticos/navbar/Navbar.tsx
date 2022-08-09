@@ -24,7 +24,7 @@ if(token!==""){
     <Toolbar variant="dense" >
         <Box className='cursor' >
             <Typography variant="h5" color="inherit">
-                BlogPessoal
+                Leo Rampazi
             </Typography>
         </Box>
         <Box display="flex" justifyContent="start">
@@ -52,7 +52,7 @@ if(token!==""){
             <Link to="/formularioTema"className="text-decorator-none">
             <Box mx={1} className='cursor'>
                 <Typography variant="h6" color="inherit">
-                    cadastrar tema
+                    cadastroTema
                 </Typography>
             </Box>
             </Link>

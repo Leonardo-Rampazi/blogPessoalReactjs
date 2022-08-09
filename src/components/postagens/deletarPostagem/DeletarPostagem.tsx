@@ -21,7 +21,7 @@ useEffect(() =>{
 	alert("Você precisa estar logado")
 	History("/login")
 	}
-},[History, token])
+},[token])
 useEffect(()=>{
 	if(id !== undefined){
 	findById(id)
@@ -30,7 +30,7 @@ useEffect(()=>{
 async function findById(id: string){
 	buscaId(`/postagens/${id}`,setPostagens, {
 		headers: {
-			'authorization': token
+			'Authorization': token
 		}
 	})
      }
@@ -38,8 +38,8 @@ async function findById(id: string){
      function sim(){
       History('/postagens')
       deleteId(`/postagens/${id}`,{
-      Headers:{
-        'authorization':token
+      headers:{
+        'Authorization':token
       }
     });
       alert('Postagem deletada com sucesso');
