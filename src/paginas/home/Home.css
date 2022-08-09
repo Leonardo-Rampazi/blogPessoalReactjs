@@ -19,3 +19,6 @@ font-weight: "bold"!important;
 .postagens{
     background-color: white!important;
 }
+.text-decoration-none{
+    text-decoration: none;
+}

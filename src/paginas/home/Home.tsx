@@ -5,12 +5,19 @@ import './Home.css';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/modalPostagem';
 import { useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import { Link } from 'react-router-dom';
 
 function home() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     let History = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+        );
     
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       if (token == "") {
           alert("Você precisa estar logado")
@@ -30,7 +37,9 @@ function home() {
                         <ModalPostagem/>
                         <Box marginRight={1}>
                         </Box>
-                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        <Link to ="/postagens" className='text-decoration-none'>
+                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >

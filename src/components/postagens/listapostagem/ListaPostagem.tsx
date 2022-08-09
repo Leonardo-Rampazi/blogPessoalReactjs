@@ -5,12 +5,15 @@ import { busca } from '../../../services/Service'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material'
 import './ListaPostagem.css';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaPostagem() {
   const [postagens, setPostagens] = useState<Postagem[]>([])
-  const [token] = useLocalStorage('token');
   let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+    );
 
   useEffect(() => {
     if (token == "") {
@@ -18,7 +21,7 @@ function ListaPostagem() {
       navigate("/login")
 
     }
-  }, [navigate, token])
+  }, [token])
 
   async function getPostagens() {
     await busca("/postagens", setPostagens, {
@@ -37,7 +40,7 @@ function ListaPostagem() {
   return (
     <>
       {
-        postagens.map(postagens => (
+        postagens.map(posts => (
           <Box m={2} >
             <Card variant="outlined">
               <CardContent>
@@ -45,29 +48,29 @@ function ListaPostagem() {
                   Postagens
                 </Typography>
                 <Typography variant="h5" component="h2">
-                  {postagens.titulo}
+                  {posts.titulo}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {postagens.texto}
+                  {posts.texto}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {postagens.data}
+                  {posts.data}
                 </Typography>
                 <Typography variant="body2" component="p">
-                  {postagens.tema?.descricao}
+                  {posts.tema?.descricao}
                 </Typography>
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                  <Link to={`/formularioPostagem/${postagens.id}`} className="text-decorator-none" >
+                  <Link to={`/formularioPostagem/${posts.id}`} className="text-decorator-none" >
                     <Box mx={1}>
                       <Button variant="contained" className="marginLeft" size='small' color="primary" >
                         atualizar
                       </Button>
                     </Box>
                   </Link>
-                  <Link to={`/deletarPostagem/${postagens.id}`} className="text-decorator-none">
+                  <Link to={`/deletarPostagem/${posts.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" size='small' color="secondary">
                         deletar
