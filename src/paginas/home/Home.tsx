@@ -9,7 +9,8 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { Link } from 'react-router-dom';
 
-function home() {
+function Home() {
+   
     // eslint-disable-next-line react-hooks/rules-of-hooks
     let History = useNavigate();
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -52,4 +53,4 @@ function home() {
         </>
     );
 }
-export default home;
+export default Home;
