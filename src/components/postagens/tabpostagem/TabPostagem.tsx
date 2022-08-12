@@ -14,8 +14,8 @@ function TabPostagem() {
   return (
     <>
       <TabContext value={value}>
-        <AppBar position="static">
-          <Tabs centered indicatorColor="primary" onChange={handleChange}className="cor">
+        <AppBar position="static" className="cor">
+          <Tabs centered indicatorColor="primary" onChange={handleChange}>
             <Tab label="Todas as postagens" value="1"/>
             <Tab label="Sobre-nós" value="2" />
           </Tabs>
@@ -27,7 +27,7 @@ function TabPostagem() {
         </TabPanel>
         <TabPanel value="2">
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Olá sou Leonardo luis Rampazi da Turma 54 da Generation, estou aprendendo e me tornando uma pessoa FullStack em breve mais informações me sigam nas minhas redes socias que estão ai embaixo, obrigado a todos !</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify" className="corDoSobre">Olá sou Leonardo luis Rampazi da Turma 54 da Generation, estou aprendendo e me tornando uma pessoa FullStack em breve mais informações me sigam nas minhas redes socias que estão ai embaixo, obrigado a todos !</Typography>
         </TabPanel>
       </TabContext>
     </>

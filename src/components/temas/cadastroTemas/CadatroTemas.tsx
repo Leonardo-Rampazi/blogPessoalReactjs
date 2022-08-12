@@ -100,7 +100,7 @@ async function findById(id: string){
         <Container maxWidth="sm" className="topo">
             <form onSubmit ={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={temas.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTemas(e)}id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={temas.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTemas(e)}id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth placeholder='faça a descrição do seu tema'/>
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

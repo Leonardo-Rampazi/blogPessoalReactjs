@@ -17,7 +17,7 @@ font-weight: "bold"!important;
     color:white!important;
 }
 .postagens{
-    background-color: white!important;
+    background: linear-gradient(90deg, #080808 0%, #d7970c 35%, #010e10 100%)!important;
 }
 .text-decoration-none{
     text-decoration: none;

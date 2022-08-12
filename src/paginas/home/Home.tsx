@@ -29,7 +29,7 @@ function Home() {
             closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
-            theme: "colored",
+            theme: "dark",
             progress: undefined,
         });
           History("/login")
@@ -54,7 +54,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://png.pngtree.com/illustrations/20190321/ourlarge/pngtree-office-jobs-cartoon-vector-png-image_32123.jpg" alt=""style={{width:"400px", height:"400px", marginLeft:"35%" , padding:"20px",borderRadius:"10%"}}/>
+                    <img src="https://png.pngtree.com/illustrations/20190321/ourlarge/pngtree-office-jobs-cartoon-vector-png-image_32123.jpg" alt="imagem"style={{width:"400px", height:"400px", marginLeft:"35%" , padding:"20px",borderRadius:"10%"}}/>
                 </Grid>
                 <Grid xs={12} className='postagens'>
                 <TabPostagem/>

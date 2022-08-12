@@ -1,6 +1,8 @@
 .cursor{
 	cursor:pointer;
 	color: white;
+    justify-content: end!important;
+    width: 70%;
 }
 .cor{
     background: linear-gradient(90deg, #726235 0%, #d7970c 35%, #010e10 100%)!important;
